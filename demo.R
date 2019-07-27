@@ -1,4 +1,11 @@
+library(magrittr)
+library(purrr)
 
+# Get data
+# remotes::install_github("ropensci/piggyback")
+# piggyback::pb_download("data/train_set_severity.rds")
+
+train_set_severity <- readRDS("data/train_set_severity.rds")
 # OK
 m1_severity <- glm(
   severity ~ log1p_average_insured_amount,
